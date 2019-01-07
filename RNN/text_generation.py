@@ -5,7 +5,7 @@ import numpy as np
 
 # read data
 lines = []
-with open("/Users/sola/PycharmProjects/mlzoo/RNN/data/alice.txt", 'r') as fin:
+with open("data/alice.txt", 'r') as fin:
     for line in fin.readlines():
         line = line.strip().lower()
         if len(line) == 0:
@@ -40,7 +40,7 @@ print(X.shape)
 print(y.shape)
 
 # build model
-hidden_size = 128  # inner output size, viewed as h; more, the more corpus needed, less, the repeated words occur
+hidden_size = 256  # inner output size, viewed as h; more, the more corpus needed, less, the repeated words occur
 batch_size = 128
 num_iterations = 25
 num_epochs_per_iteration = 1
